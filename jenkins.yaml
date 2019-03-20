@@ -1,5 +1,19 @@
 jenkins:
   systemMessage: "Jenkins configured automatically by Jenkins Configuration as Code plugin\n\n"
+  nodes:
+  - permanent:
+      labelString: "remote"
+      launcher:
+        jnlp:
+          workDirSettings:
+            disabled: false
+            failIfWorkDirIsMissing: false
+            internalDir: "remoting"
+      mode: EXCLUSIVE
+      name: "james-charge-02"
+      nodeDescription: "Remote dockerized stress environment"
+      numExecutors: 1
+      remoteFS: "/home/jenkins/build/"
   numExecutors: 1
   securityRealm:
     local:
