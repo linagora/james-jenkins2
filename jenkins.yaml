@@ -7,3 +7,7 @@ jenkins:
       users:
         - id: ${JENKINS_ADMIN}
           password: ${JENKINS_PASSWORD}
+
+unclassified:
+  location:
+    url: ${JENKINS_URL}
