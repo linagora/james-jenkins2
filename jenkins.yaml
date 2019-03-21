@@ -1,4 +1,7 @@
 jenkins:
+  authorizationStrategy: 
+    loggedInUsersCanDoAnything:
+      allowAnonymousRead: true
   systemMessage: "Jenkins configured automatically by Jenkins Configuration as Code plugin\n\n"
   nodes:
   - permanent:
