@@ -15,3 +15,20 @@ You have to modify the env.file file with the following parameters:
  - __JENKINS_URL__: is the external URL of your jenkins (ex. "http://ci-james.org:8080/")
  - __JENKINS_ADMIN__: is the Jenkins administrator
  - __JENKINS_PASSWORD__: is the password of the Jenkins administrator
+
+= Running slaves
+
+
+You may need to start one (or several) Jenkins slave.
+
+```bash
+$docker build -f DockerfileSlave -t jenkins-slave .
+$docker run -d -v /var/run/docker.sock:/var/run/docker.sock --rm --name jenkins-slave jenkins-slave -url <master-url> <secret> <host>
+```
+
+Where:
+
+ - __master-url__: is the URL of your jenkins
+ - __ secret__: is the agent secret
+ - __host__: is the agent name
+
