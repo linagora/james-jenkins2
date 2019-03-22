@@ -26,6 +26,10 @@ jenkins:
           password: ${JENKINS_PASSWORD}
 
 tool:
+  git:
+    installations:
+    - home: "git"
+      name: "Default"
   sbtInstallation:
     installations:
     - name: "sbt"
