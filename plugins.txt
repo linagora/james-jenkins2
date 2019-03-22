@@ -1,0 +1,4 @@
+configuration-as-code:1.8
+gatling:1.2.5
+git:3.9.3
+sbt:1.5
