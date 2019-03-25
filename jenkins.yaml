@@ -25,6 +25,21 @@ jenkins:
         - id: ${JENKINS_ADMIN}
           password: ${JENKINS_PASSWORD}
 
+tool:
+  git:
+    installations:
+    - home: "git"
+      name: "Default"
+  sbtInstallation:
+    installations:
+    - name: "sbt"
+      home: ""
+      properties:
+        - installSource:
+            installers:
+            - sbtInstaller:
+                id: 1.2.8
+
 unclassified:
   location:
     url: ${JENKINS_URL}
