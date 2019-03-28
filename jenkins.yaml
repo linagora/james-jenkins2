@@ -26,6 +26,9 @@ jenkins:
           password: ${JENKINS_PASSWORD}
 
 tool:
+  dockerTool:
+    installations:
+    - name: "docker"
   git:
     installations:
     - home: "git"
