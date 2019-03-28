@@ -11,5 +11,8 @@ COPY setupWizard.groovy /usr/share/jenkins/ref/init.groovy.d/setupWizard.groovy
 COPY init-gatling-job.groovy /usr/share/jenkins/ref/init.groovy.d/init-gatling-job.groovy
 COPY gatling-job.groovy /usr/share/jenkins/ref/init.groovy.d/jobs/gatling-job.groovy
 
+COPY init-stress-job.groovy /usr/share/jenkins/ref/init.groovy.d/init-stress-job.groovy
+COPY stress-job.groovy /usr/share/jenkins/ref/init.groovy.d/jobs/stress-job.groovy
+
 # Configuration AS Code env variable
 ENV CASC_JENKINS_CONFIG=/usr/share/jenkins/ref/
