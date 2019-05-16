@@ -1,10 +1,11 @@
 job('Gatling job') {
     parameters {
         stringParam('SBT_ACTION', '', 'sbt action, ex.: gatling:testOnly com.linagora.gatling.imap.scenario.ImapSimpleScenario')
+        stringParam('GITHUB', '', 'Github repository used, ex.: linagora/imap-gatling')
     }
     scm {
         git {
-            remote { github('linagora/gatling-imap') }
+            remote { github('$GITHUB') }
             branch('*/master')
         }
     }

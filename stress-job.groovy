@@ -3,7 +3,8 @@ pipelineJob("Stress job") {
     parameters {
         stringParam('REPOSITORY_URL', '', 'James git repository URL')
         stringParam('BRANCH', '', 'James branch')
-        stringParam('SCENARIO', '', 'Gatling scenario')
+        stringParam('SIMULATION', '', 'Gatling simulation')
+        stringParam('GITHUB_SIMULATIONS', '', 'Github repository containing gatling simulations')
     }
 
     definition {
