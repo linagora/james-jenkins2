@@ -1,4 +1,4 @@
-pipelineJob("Stress job") {
+pipelineJob("Stress-job") {
 
     parameters {
         stringParam('REPOSITORY_URL', '', 'James git repository URL')
