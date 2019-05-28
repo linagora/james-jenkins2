@@ -15,7 +15,7 @@ pipelineJob("Stress-job") {
                     branch('$BRANCH')
                 }
             }
-            scriptPath('JenkinsfileStressTests')
+            scriptPath('JenkinsfileStressTests.groovy')
         }
     }
 }
