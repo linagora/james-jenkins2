@@ -32,3 +32,5 @@ Where:
  - __ secret__: is the agent secret
  - __host__: is the agent name
 
+Add `-v /srv:/srv --privileged` on the target's slave
+
