@@ -15,6 +15,7 @@ You have to modify the env.file file with the following parameters:
  - __JENKINS_URL__: is the external URL of your jenkins (ex. "http://ci-james.org:8080/")
  - __JENKINS_ADMIN__: is the Jenkins administrator
  - __JENKINS_PASSWORD__: is the password of the Jenkins administrator
+ - __TARGET_HOSTNAME__: is the target name for the injector
 
 = Running slaves
 

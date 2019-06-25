@@ -10,7 +10,7 @@ job('Gatling-job') {
         }
     }
     steps {
-        sbt('sbt', '$SBT_ACTION', '-Dsbt.log.noformat=true -DTARGET_HOSTNAME=james-charge-01')
+        sbt('sbt', '$SBT_ACTION', '-Dsbt.log.noformat=true')
     }
     publishers {
         archiveGatling()
