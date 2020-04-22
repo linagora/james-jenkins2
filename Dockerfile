@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:2.207
+FROM jenkins/jenkins:2.222.1
 
 USER jenkins
 

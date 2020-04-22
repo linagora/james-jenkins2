@@ -50,9 +50,9 @@ tool:
     installations:
       - name: "maven"
         properties:
-          - installSourceProperty:
+          - installSource:
               installers:
-              - mavenInstaller:
+              - maven:
                   id: 3.6.0
   sbtInstallation:
     installations:
