@@ -53,7 +53,7 @@ tool:
           - installSource:
               installers:
               - maven:
-                  id: 3.6.0
+                  id: 3.6.3
   sbtInstallation:
     installations:
     - name: "sbt"
@@ -62,7 +62,7 @@ tool:
         - installSource:
             installers:
             - sbtInstaller:
-                id: 1.2.8
+                id: 1.3.10
 
 unclassified:
   location:
