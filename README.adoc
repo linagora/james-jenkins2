@@ -10,21 +10,14 @@ $ docker build -t jenkins .
 $ docker run -d -p 8080:8080 -p 50000:50000 --env-file=./env.file --name jenkins jenkins
 ```
 
-You have to modify the env.file file with the following parameters:
-
- - __JENKINS_URL__: is the external URL of your jenkins (ex. "http://ci-james.org:8080/")
- - __JENKINS_ADMIN__: is the Jenkins administrator
- - __JENKINS_PASSWORD__: is the password of the Jenkins administrator
- - __TARGET_HOSTNAME__: is the target name for the injector
+You have to modify env.file and env.file.target.
 
 = Running slaves
-
-
-You may need to start one (or several) Jenkins slave.
+You need to start Jenkins slaves.
 
 ```bash
-$docker build -f DockerfileSlave -t jenkins-slave .
-$docker run -d -v /var/run/docker.sock:/var/run/docker.sock --rm --name jenkins-slave jenkins-slave -url <master-url> <secret> <host>
+$ docker build -f DockerfileSlave -t jenkins-slave .
+$ docker run -d -v /var/run/docker.sock:/var/run/docker.sock --rm --name jenkins-slave jenkins-slave -url <master-url> <secret> <host>
 ```
 
 Where:
@@ -32,6 +25,7 @@ Where:
  - __master-url__: is the URL of your jenkins
  - __ secret__: is the agent secret
  - __host__: is the agent name
+ - __profile__: is the slave kind (target or injector)
 
-Add `-v /srv:/srv --privileged` on the target's slave
+Add `-v /srv:/srv --privileged -env-file env.file.target ` on the target's slave
 
