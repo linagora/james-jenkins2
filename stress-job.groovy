@@ -5,6 +5,7 @@ pipelineJob("Stress-job") {
         stringParam('BRANCH', '', 'James branch')
         stringParam('SIMULATION', '', 'Gatling simulation')
         stringParam('GITHUB_SIMULATIONS', '', 'Github repository containing gatling simulations')
+        stringParam('WARMUP_DURATION', '', 'The duration of the warmup in minutes, ex.: 5')
         stringParam('PROFILE', 'reference', 'Blobs store target: reference (default, for over-time performance tracking), s3 or s3-local')
     }
 
