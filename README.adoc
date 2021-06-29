@@ -1,3 +1,7 @@
+= Deprecation notice
+
+This project uses materials that had been removed from the Apache James project and should no longer be used.
+
 = Building the image
 
 ```bash
